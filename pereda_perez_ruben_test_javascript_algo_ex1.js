@@ -9,7 +9,7 @@ function isArrayDimensionValid(height, width){
 }
 
 
-export function createTwoDimensionalArray(height = 9, width = 9){
+ function createTwoDimensionalArray(height = 9, width = 9){
     // Checking that the array dimensions are valid.
     if(!isArrayDimensionValid(height, width)){
         return null;
@@ -22,8 +22,8 @@ export function createTwoDimensionalArray(height = 9, width = 9){
     return baseArr;
 }
 
-// In the exercise case the array contains strings separated by spaces that can be easily converted in a array using split.
-export function readOneDimensionalArray(readArray, arrayToFill){
+//In the exercise case the array contains strings separated by spaces that can be easily converted in a array using split.
+ function readOneDimensionalArray(readArray, arrayToFill){
     // The use of arrayToFill in this particular case seems redundant: map already returns an array.
     if(!readArray || !arrayToFill) return null;
     arrayToFill = readArray.map(str => {
@@ -59,6 +59,6 @@ function checkSudokuSize(arr){
 }
 // Appends the created table to the html element. Maybe this sould be a function too.
 
-const arr = readOneDimensionalArray(array, createTwoDimensionalArray())
+const arr = readOneDimensionalArray(array_number, createTwoDimensionalArray())
 checkSudokuSize(arr) ? document.body.appendChild(arrayToHTMLTable(arr)) 
     : document.body.appendChild(document.createElement('p').appendChild(document.createTextNode('The sudoku is invalid :(')))

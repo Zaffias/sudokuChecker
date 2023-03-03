@@ -11,7 +11,7 @@ function areValidNumbers(arr){
     return true
 }
 
-export function isValidRow(arrToCheck){
+ function isValidRow(arrToCheck){
     // I decided to chek if a number repeats by sorting the array and checking if the next number is the same as the one I'm iterating.
     // As we need to sort the array we will make a copy of it so the original array that 'arr' references is not modified.
     if(!arrToCheck) return false;

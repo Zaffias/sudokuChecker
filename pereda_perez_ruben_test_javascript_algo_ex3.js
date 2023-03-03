@@ -127,5 +127,5 @@ function createErrorTable(arr){
     return document.createElement('p').appendChild(document.createTextNode('Yay!! The sudoku has no errors'))
 }
 
-const arr = readOneDimensionalArray(array, createTwoDimensionalArray())
-document.body.appendChild(createErrorTable(arr))
+const arrayToPrint = readOneDimensionalArray(array_number, createTwoDimensionalArray())
+document.body.appendChild(createErrorTable(arrayToPrint))
